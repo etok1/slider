@@ -65,6 +65,19 @@ links.forEach((link, index) => {
     displayInfo(currentIndex);
   });
 });
+circles.forEach((circle, index) => {
+  circle.addEventListener("click", () => {
+    circles.forEach((c) => {
+      c.classList.remove("active");
+    });
+    circle.classList.add("active");
+
+    image.querySelector("img").src = kinds[index].img;
+    currentIndex = index;
+
+    displayInfo(currentIndex);
+  });
+});
 backArrow.addEventListener("click", () => {
   displayInfo(currentIndex - 1);
   circles[currentIndex - 1].classList.remove("active");
