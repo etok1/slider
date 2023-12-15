@@ -33,8 +33,6 @@ const area = document.querySelector(".area");
 const image = document.querySelector(".main__second-example-image");
 const links = document.querySelectorAll(".main__second-example-links li");
 
-// Add click event listeners to each link
-
 const displayInfo = (index) => {
   currentIndex = (index + kinds.length) % kinds.length;
   city.innerText = kinds[currentIndex].city;
